@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>Task Manager</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+
+            <div class="date" id="currentDate"></div>
+        </header>
+
+        <section class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                maxlength="100"
+            >
+
+            <button id="addTaskBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+        <section class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="pending">
+                Pending
+            </button>
+
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+
+        </section>
+
+        <section class="task-summary">
+
+            <div class="summary-card">
+                <span class="summary-number" id="totalTasks">0</span>
+                <span class="summary-label">Total Tasks</span>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-number" id="pendingTasks">0</span>
+                <span class="summary-label">Pending</span>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-number" id="completedTasks">0</span>
+                <span class="summary-label">Completed</span>
+            </div>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyMessage" class="empty-message">
+                <div class="empty-icon">✓</div>
+                <h2>No tasks yet</h2>
+                <p>Add your first task to get started.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
